@@ -5,7 +5,7 @@
 import RPi.GPIO as GPIO
 import time
 
-SWITCH_PORT = 18
+SWITCH_PORT = 23
 
 GPIO.setmode(GPIO.BCM)          # GPIO番号で指定
 GPIO.setup(SWITCH_PORT, GPIO.IN, pull_up_down=GPIO.PUD_UP)

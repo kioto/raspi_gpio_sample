@@ -5,7 +5,7 @@
 import RPi.GPIO as GPIO
 import time
 
-LED_PORT = 23
+LED_PORT = 18
 
 GPIO.setmode(GPIO.BCM)          # GPIO番号で指定
 GPIO.setup(LED_PORT, GPIO.OUT)

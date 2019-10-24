@@ -6,7 +6,7 @@ import tkinter
 import RPi.GPIO as GPIO
 import time
 
-DEFAULT_SWITCH_PORT = 18
+DEFAULT_SWITCH_PORT = 23
 
 class SwitchGUI(object):
     

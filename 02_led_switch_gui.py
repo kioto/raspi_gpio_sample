@@ -6,8 +6,8 @@ import tkinter
 import RPi.GPIO as GPIO
 import time
 
-DEFAULT_SWITCH_PORT = 18
-DEFAULT_LED_PORT = 23
+DEFAULT_SWITCH_PORT = 23
+DEFAULT_LED_PORT = 18
 
 class LedSwitchGUI(object):
     
