@@ -10,7 +10,7 @@ PWM_RANGE = 100
 CLOCK_BASE = int(19.2 * 1000 / 50.0)
 print(CLOCK_BASE)
 
-# Software PWM
+# Hardware PWM
 wiringpi.wiringPiSetupGpio()
 wiringpi.pinMode(LED_PORT, wiringpi.GPIO.PWM_OUTPUT)
 wiringpi.pwmSetMode(wiringpi.GPIO.PWM_MODE_MS)
