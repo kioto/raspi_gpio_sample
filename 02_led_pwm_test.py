@@ -7,14 +7,13 @@ import RPi.GPIO as GPIO
 import time
 
 LED_PORT = 18
-PWM_FREQUENCY = 500             # Hz
 
-def main(duty):
+def main(freq, duty):
     GPIO.setmode(GPIO.BCM)          # GPIO番号で指定
     GPIO.setup(LED_PORT, GPIO.OUT)
 
     # PWM
-    pwm = GPIO.PWM(LED_PORT, PWM_FREQUENCY)
+    pwm = GPIO.PWM(LED_PORT, freq)
     pwm.start(duty)
 
     # LEDを30秒間点灯する
@@ -25,8 +24,8 @@ def main(duty):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 2:
-        print('Usage: python %s <duty_cycle>' % sys.argv[0])
+    if len(sys.argv) != 3:
+        print('Usage: python %s <frequency> <duty_cycle>' % sys.argv[0])
         exit()
 
-    main(float(sys.argv[1]))
+    main(int(sys.argv[1]), float(sys.argv[2]))
