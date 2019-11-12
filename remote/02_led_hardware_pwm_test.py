@@ -1,5 +1,8 @@
+# /usr/bin/env python3
+# -*- coding:utf-8 -*-
+
 #
-# 02_led_pigpio_haedware_pwm_test.py
+# 02_led_haedware_pwm_test.py
 #
 
 import sys
@@ -8,9 +11,9 @@ import pigpio
 
 LED_PORT = 18
 
-def main(freq, duty):
+def main(hostname, freq, duty):
     # Software PWM
-    pi = pigpio.pi()
+    pi = pigpio.pi(hostname)
     pi.set_mode(LED_PORT, pigpio.OUTPUT)
 
     try:
@@ -26,8 +29,13 @@ def main(freq, duty):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 3:
-        print('Usage: python %s <frequency> <duty_cycle>' % sys.argv[0])
+    if len(sys.argv) < 3:
+        print('Usage: python %s <<frequency> <duty_cycle> [<hostname>]'
+              % sys.argv[0])
         exit()
 
-    main(int(sys.argv[1]), int(sys.argv[2]))
+    hostname = 'localhost'
+    if len(sys.argv) >= 4:
+        hostname = sys.argv[3]
+
+    main(int(sys.argv[1]), int(sys.argv[2]), hostname)
