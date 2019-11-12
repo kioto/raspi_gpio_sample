@@ -1,5 +1,5 @@
 #
-# 02_led_pigpio_sofware_pwm_test.py
+# 02_led_pigpio_software_pwm_test.py
 #
 
 import sys

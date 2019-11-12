@@ -1,5 +1,5 @@
 #
-# 02_led_pigpio_sofware_pwm.py
+# 02_led_pigpio_software_pwm.py
 #
 
 import time
