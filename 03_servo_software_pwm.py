@@ -13,8 +13,8 @@ WAIT_TIME = 1.0
 # "90" (~2.4 ms pulse) is all the way to the right,
 # "-90" (~ 0.5 ms pulse) is all the way left.
 
-PWM_FREQUENCY = 50              # Hz
-PWM_CYCLE = 1/50 * 1000         # ms
+PWM_FREQUENCY = 50                     # Hz
+PWM_CYCLE = 1/PWM_FREQUENCY * 1000     # ms
 DUTY_MIDDLE   = 1.45 / PWM_CYCLE * 100 # %
 DUTY_PLUS_90  = 2.4  / PWM_CYCLE * 100 # %
 DUTY_MINUS_90 = 0.5  / PWM_CYCLE * 100 # %
